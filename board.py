@@ -5,7 +5,7 @@ class Board():
                       "-", "-", "-",
                       "-", "-", "-"]  
         
-        self.turn_coutner = [0] * 9
+        self.turns = [0] * 9
 
     def display_board(self):
         print(self.board[0] + " | " + self.board[1] + " | " + self.board[2] + "\n"
@@ -16,13 +16,13 @@ class Board():
     
     def update_position(self, position, current_player): #This part is where it counts what lifespan of the symbol
         self.board[position] = current_player
-        self.board[position] = 6
+        self.turns[position] = 6
 
     def turn_counter(self):
         for i in range(9):
-            if self.turn_counter > 0:
-                self.turn_counter -= 1
-                if self.turn_counter == 0:
+            if self.turns > 0:
+                self.turns -= 1
+                if self.turns == 0:
                     self.board = "-"
 
 
