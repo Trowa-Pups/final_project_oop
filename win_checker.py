@@ -1,6 +1,6 @@
 #This file checks the board if a specific symbol has a win condition
 class WinChecker:
-    def win_checker(self, board, symbol):
+    def win_check(self, board, symbol):
         win_conditions = [[board[0], board[1], board[2]] #Horizontal
                           [board[3], board[4], board[5]]
                           [board[6], board[7], board[8]]
