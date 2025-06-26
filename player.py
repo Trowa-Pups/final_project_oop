@@ -17,7 +17,7 @@ class Player:
             except ValueError:
                 print("Invalid Value! Please input 1 to 9")
 
-class OtherPlayer: #For Polymorphism 
+class OtherPlayer(Player): #For Polymorphism 
     def get_input(self, board):
         return super().get_input(board)
         
