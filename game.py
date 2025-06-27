@@ -1,5 +1,7 @@
 #Using my old tic tac toe project and making it cooler and oop style
-from win_checker import win_check
+from win_checker import WinChecker
+from player import Player, OtherPlayer
+from board import Board
 
 class TicTacToe:
     def __init__(self, board, player_1, player_2):
@@ -11,7 +13,15 @@ class TicTacToe:
     def switch_player(self): #To switch the players in their turns
         self.current_player , self.other_player = self.other_player, self.current_player
 
-    def play(self):
+    def play(self): #Player turns
         self.board.display()
         move = self.current_player.get_input(self.board)
         self.board.update_position(move, self.current_player.symbol)
+
+        if check_win(self.board, self.current_player.symbol): #To show winner 
+            self.board.display()
+            print(f"The winner is {self.current_player.symbol}!")
+            break
+
+        self.board.turn_counter()
+        self.switch_player()
