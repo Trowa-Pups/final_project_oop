@@ -5,12 +5,13 @@
 from game import TicTacToe
 from player import Player, OtherPlayer
 from board import Board
+from colorama import Fore #For cool factor 
 
 
 def main():
     board = Board() 
-    player_1 = Player("X") #First Player is X
-    player_2 = OtherPlayer("O") #Second is O
+    player_1 = Player("❌") #First Player is X changed it to an Emoji 
+    player_2 = OtherPlayer("⭕") #Second is O changed it to an Emoji 
 
     game = TicTacToe(board, player_1, player_2)
     game.play() #To launch the game
