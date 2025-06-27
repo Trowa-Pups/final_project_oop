@@ -8,7 +8,7 @@ class Player:
             try:
                 user_input = int(input("Enter a number between 1 to 9!")) - 1 #Putting - 1 here so i dont need to make it [user_input - 1]
 
-                if 0 <= user_input <= 8 and board[user_input] == "-":
+                if 0 <= user_input <= 8 and board.board[user_input] == "-":
                     return user_input #To store the player's input value
             
                 else:
