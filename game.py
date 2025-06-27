@@ -25,5 +25,5 @@ class TicTacToe:
                 print(f"The winner is {self.current_player.symbol}!")
                 break
 
-        self.board.turn_counter()
-        self.switch_player()
+            self.board.turn_counter()
+            self.switch_player()
