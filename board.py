@@ -1,4 +1,5 @@
 #This is the board side of the project
+from colorama import Fore
 class Board():
     def __init__(self):
         self.board = ["-", "-", "-",
