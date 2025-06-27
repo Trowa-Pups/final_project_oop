@@ -20,7 +20,7 @@ class Board():
 
     def turn_counter(self):
         for i in range(9):
-            if self.turns > 0:
-                self.turns -= 1 
-                if self.turns == 0:
-                    self.board = "-"
+            if self.turns[i] > 0:
+                self.turns[i] -= 1 
+                if self.turns[i] == 0:
+                    self.board[i] = "-"
