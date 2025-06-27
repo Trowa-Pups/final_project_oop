@@ -19,5 +19,5 @@ class Player:
 
 class OtherPlayer(Player): #For Polymorphism 
     def get_input(self, board):
-        return super().get_input(board)
+        return super().user_input(board)
         
