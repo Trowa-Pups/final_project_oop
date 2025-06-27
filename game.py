@@ -2,6 +2,8 @@
 from win_checker import WinChecker
 from player import Player, OtherPlayer
 from board import Board
+from colorama import Fore, Style
+import time
 
 class TicTacToe:
     def __init__(self, board, player_1, player_2):
@@ -22,7 +24,8 @@ class TicTacToe:
 
             if win_checker.win_check(self.board, self.current_player.symbol): #To show winner 
                 self.board.display_board()
-                print(f"The winner is {self.current_player.symbol}!")
+                time.sleep(0.5)
+                print(Fore.LIGHTYELLOW_EX + f"🏆 The winner is {self.current_player.symbol}! 🏆" + Style.RESET_ALL)
                 break
 
             self.board.turn_counter()
