@@ -14,14 +14,15 @@ class TicTacToe:
         self.current_player , self.other_player = self.other_player, self.current_player
 
     def play(self): #Player turns
-        self.board.display()
-        move = self.current_player.get_input(self.board)
-        self.board.update_position(move, self.current_player.symbol)
-
-        if check_win(self.board, self.current_player.symbol): #To show winner 
+        while True:
             self.board.display()
-            print(f"The winner is {self.current_player.symbol}!")
-            break
+            move = self.current_player.get_input(self.board)
+            self.board.update_position(move, self.current_player.symbol)
+
+            if check_win(self.board, self.current_player.symbol): #To show winner 
+                self.board.display()
+                print(f"The winner is {self.current_player.symbol}!")
+                break
 
         self.board.turn_counter()
         self.switch_player()
