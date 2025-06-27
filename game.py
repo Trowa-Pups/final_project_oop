@@ -24,7 +24,7 @@ class TicTacToe:
 
             if win_checker.win_check(self.board, self.current_player.symbol): #To show winner 
                 self.board.display_board()
-                time.sleep(0.5)
+                time.sleep(2)
                 print(Fore.LIGHTYELLOW_EX + f"🏆 The winner is {self.current_player.symbol}! 🏆" + Style.RESET_ALL)
                 break
 
