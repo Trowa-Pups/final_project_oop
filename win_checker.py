@@ -11,7 +11,7 @@ class WinChecker:
                           [board[2], board[4], board[6]]
                           ]
         
-        for condition in win conditions: #checks if one of the conditions are met
+        for condition in win_conditions: #checks if one of the conditions are met
             if all(cell == symbol for cell in condition):
                 return True
             
